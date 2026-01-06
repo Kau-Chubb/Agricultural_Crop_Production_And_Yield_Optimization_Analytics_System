@@ -350,11 +350,143 @@ The Power BI report is organized into multiple analytical views, each addressing
 - 🔍 **Drill-Down Analysis** – State → District → Crop level insights  
 - 🔄 **Automated Refresh** – Synced with Gold-layer Delta tables  
 - 📤 **Export Options** – PDF, Excel, and PowerPoint  
-
+---
 
 ### 🎯 Business Impact
 - Enables identification of **high- and low-performing regions**
 - Improves visibility into **yield-influencing factors**
 - Supports **data-driven agricultural policy and planning**
 - Reduces manual analysis and reporting effort
+---
+## 🚀 Quick Start
+
+This section provides step-by-step instructions to set up and run the **Agricultural Crop Production & Yield Optimization Analytics System**, covering environment setup, pipeline execution, and analytics consumption.
+
+---
+
+## ✅ Prerequisites
+
+Before starting, ensure the following are available:
+
+- Docker Desktop (latest stable version)
+- Docker Compose v2 or higher
+- Python 3.8+
+- Access to a Databricks workspace
+- Databricks personal access token
+- Power BI Desktop
+- Git
+- Minimum 8 GB RAM (16 GB recommended)
+
+---
+
+## 🚀 Quick Start
+
+This section provides step-by-step instructions to set up and run the **Agricultural Crop Production & Yield Optimization Analytics System**, covering environment setup, pipeline execution, and analytics consumption.
+
+---
+
+### ✅ Prerequisites
+
+Before starting, ensure the following are available:
+
+- Docker Desktop (latest stable version)
+- Docker Compose v2 or higher
+- Python 3.8+
+- Access to a Databricks workspace
+- Databricks personal access token
+- Power BI Desktop
+- Git
+- Minimum 8 GB RAM (16 GB recommended)
+
+---
+
+### 📥 Step 1: Clone the Repository
+
+Clone the project repository and navigate to the project directory.
+
+```bash
+git clone <your-github-repository-url>
+cd Agricultural_Crop_Production_And_Yield_Optimization_Analytics_System
+```
+
+
+### 🐳 Step 2: Start Apache Airflow Services
+
+Navigate to the Airflow directory and start all required services using Docker Compose.
+
+```bash
+cd capstone_airflow
+docker compose up -d
+```
+
+
+### 🌐 Step 3: Access the Airflow Web Interface
+
+Open the Airflow UI in your browser to monitor and manage pipelines.
+
+```text
+http://localhost:8080
+```
+
+Login credentials:
+
+```text
+Username: admin
+Password: admin
+```
+
+
+### 🔗 Step 4: Configure Databricks Connection in Airflow
+
+Configure Airflow to securely connect to Databricks for job execution.
+
+```text
+Airflow UI → Admin → Connections → Add New
+Connection ID   : databricks_default
+Connection Type : Databricks
+Host            : <Databricks Workspace URL>
+Token           : <Databricks Personal Access Token>
+```
+
+
+### ▶️ Step 5: Execute ETL Pipelines
+
+Trigger the ETL pipeline to process data across Bronze, Silver, and Gold layers.
+
+```text
+Airflow UI → DAGs → Enable ETL_DAG → Trigger DAG
+```
+
+Pipeline execution order:
+
+```text
+Bronze Layer → Silver Layer → Gold Layer
+```
+
+
+### 📊 Step 6: Open Power BI Dashboard
+
+Open the Power BI report and refresh it to view the latest analytics.
+
+```text
+dashboard/agricultural_analytics.pbix
+```
+
+Steps inside Power BI:
+
+```text
+Home → Transform Data → Data Source Settings → Update Databricks Connection
+Home → Refresh
+```
+
+
+### ✅ Step 7: Verify Data & Logs
+
+Validate successful execution by checking logs and output tables.
+
+```text
+Databricks → Gold Tables
+Databricks → Agricultural_Logging Tables
+Airflow UI → Task Logs
+```
 ---
