@@ -1,0 +1,9 @@
+Crop,Crop_Category,Primary_Season,Avg_Water_Requirement_mm,Recommended_N_kg_ha,Recommended_P_K_kg_ha,Climate_Sensitivity
+Rice,Cereal,Kharif/Rabi,120,25,25,High
+Wheat,Cereal,Rabi,120,60,40,Medium
+Maize,Cereal,Kharif,150,60,40,Medium
+Cotton,Fiber,Kharif,100,50,50,Medium
+Sugarcane,Cash Crop,Annual,250,115,115,High
+Soybean,Oilseed,Kharif,30,60,40,Low
+Groundnut,Oilseed,Kharif,25,50,50,Low
+Pulses,Pulse,Rabi,20,40,40,Low
