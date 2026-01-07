@@ -381,7 +381,7 @@ Before starting, ensure the following are available:
 Clone the project repository and navigate to the project directory.
 
 ```bash
-git clone <your-github-repository-url>
+git clone <https://github.com/Kau-Chubb/Agricultural_Crop_Production_And_Yield_Optimization_Analytics_System>
 cd Agricultural_Crop_Production_And_Yield_Optimization_Analytics_System
 ```
 
